@@ -90,6 +90,7 @@ function start_game() {
     new_game(player.play_field, player.active_piece);
     player.score = 0;
     player.level = 1;
+    player.lines = 0;
     player.name = username;
     console.log(player);
     draw_field(field_context, 20, 10, field_canvas.height/20, field_canvas.width/10, player.active_piece, player.play_field);
@@ -117,7 +118,7 @@ start.addEventListener('click', start_game);
 const pause = document.querySelector('#pause');
 pause.addEventListener('click', pause_game);
 
-let username = "No";
+let username = "Anonym Pork";
 
 button_animation(pause);
 button_animation(start);
